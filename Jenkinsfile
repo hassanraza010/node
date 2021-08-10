@@ -25,7 +25,7 @@ pipeline {
         
         stage('Sonarscanner') {
             steps {
-                nodejs('NodeJS'){
+                nodejs('NodeJs'){
                     sh 'npm install --save-dev sonarqube-scanner'
                     sh 'node sonarqube-scanner.js'
                 } 
