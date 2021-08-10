@@ -22,6 +22,14 @@ pipeline {
                 }
             }
         }
+        
+        stage('Sonarscanner') {
+            steps {
+                nodejs('NodeJS'){
+                    sh 'npm install --save-dev sonarqube-scanner'
+                    sh 'node sonarqube-scanner.js'
+                } 
+            }
                     
                         
 
